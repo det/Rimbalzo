@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{12B4C734-8696-455D-A2C0-C03B93E6CEF6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Client</RootNamespace>
+    <AssemblyName>Client</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Shaders\" />
+    <Folder Include="Images\" />
+    <Folder Include="Models\" />
+    <Folder Include="Maps\" />
+    <Folder Include="Loaders\" />
+    <Folder Include="Programs\" />
+    <Folder Include="Vertex\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\material.frag">
+      <Gettext-ScanForTranslations>false</Gettext-ScanForTranslations>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Shaders\material.vert">
+      <Gettext-ScanForTranslations>false</Gettext-ScanForTranslations>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\font.png">
+      <Gettext-ScanForTranslations>false</Gettext-ScanForTranslations>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\nebula.png">
+      <Gettext-ScanForTranslations>false</Gettext-ScanForTranslations>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Models\ship.obj">
+      <Gettext-ScanForTranslations>false</Gettext-ScanForTranslations>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Models\ship.mtl">
+      <Gettext-ScanForTranslations>false</Gettext-ScanForTranslations>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\wall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Models\wall.mtl">
+      <Gettext-ScanForTranslations>false</Gettext-ScanForTranslations>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Maps\test.xml">
+      <Gettext-ScanForTranslations>false</Gettext-ScanForTranslations>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Shaders\raster.vert">
+      <Gettext-ScanForTranslations>false</Gettext-ScanForTranslations>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Shaders\raster.frag">
+      <Gettext-ScanForTranslations>false</Gettext-ScanForTranslations>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Shaders\trace.frag">
+      <Gettext-ScanForTranslations>false</Gettext-ScanForTranslations>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Shaders\trace.vert">
+      <Gettext-ScanForTranslations>false</Gettext-ScanForTranslations>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Shaders\goal.vert">
+      <Gettext-ScanForTranslations>false</Gettext-ScanForTranslations>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Shaders\goal.frag">
+      <Gettext-ScanForTranslations>false</Gettext-ScanForTranslations>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\goal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Models\ball.mtl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Models\ball.obj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\speedup.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Models\goalie.obj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\ballspawn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainWindow.cs" />
+    <Compile Include="Texture.cs" />
+    <Compile Include="Fps.cs" />
+    <Compile Include="Starfield.cs" />
+    <Compile Include="Loaders\ObjMaterial.cs" />
+    <Compile Include="Loaders\ObjMesh.cs" />
+    <Compile Include="Programs\MaterialProgram.cs" />
+    <Compile Include="Programs\RasterProgram.cs" />
+    <Compile Include="Programs\TraceProgram.cs" />
+    <Compile Include="Programs\Programs.cs" />
+    <Compile Include="Label.cs" />
+    <Compile Include="Loaders\CompiledMesh.cs" />
+    <Compile Include="Loaders\MeshBuilder.cs" />
+    <Compile Include="Loaders\Mesh.cs" />
+    <Compile Include="Image.cs" />
+    <Compile Include="Loaders\MapMesh.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="Vertex\VertexTP2.cs" />
+    <Compile Include="Vertex\VertexTNP3.cs" />
+    <Compile Include="Vertex\IVertex.cs" />
+    <Compile Include="Vertex\VertexP2.cs" />
+    <Compile Include="Programs\GoalProgram.cs" />
+    <Compile Include="Loaders\SensorMesh.cs" />
+    <Compile Include="OfflineWindow.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="OpenTK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="FarseerPhysics, Version=3.2.4022.3812, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\FarseerPhysics.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{0CBF663F-246B-49AD-A696-FDEB6CA3B715}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

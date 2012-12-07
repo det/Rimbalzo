@@ -1,0 +1,17 @@
+# Material file for ship.obj
+
+newmtl Custom
+	Ns 128
+	d 1
+	illum 2
+	Kd 0.0 0.0 0.0
+	Ks 0.1 0.1 0.1
+	Ka 0.1 0.1 0.1
+
+newmtl Black_Metal
+	Ns 128
+	d 1
+	illum 2
+	Kd 0.2 0.2 0.2
+	Ks 0.3 0.3 0.3
+	Ka 0.1 0.1 0.1

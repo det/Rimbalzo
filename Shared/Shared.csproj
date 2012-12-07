@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0CBF663F-246B-49AD-A696-FDEB6CA3B715}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Shared</RootNamespace>
+    <AssemblyName>Shared</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="FarseerPhysics, Version=3.2.4022.3812, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\FarseerPhysics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FMath.cs" />
+    <Compile Include="Parse.cs" />
+    <Compile Include="Ship.cs" />
+    <Compile Include="Primitives\Triangle.cs" />
+    <Compile Include="Primitives\Quad.cs" />
+    <Compile Include="Primitives\LineSegment.cs" />
+    <Compile Include="Data\MapData.cs" />
+    <Compile Include="Data\WallData.cs" />
+    <Compile Include="Data\ShapeData.cs" />
+    <Compile Include="Data\SpawnData.cs" />
+    <Compile Include="Data\BallData.cs" />
+    <Compile Include="Data\GoalData.cs" />
+    <Compile Include="Compiled\GoalCompiled.cs" />
+    <Compile Include="Compiled\MapCompiled.cs" />
+    <Compile Include="Compiled\WallCompiled.cs" />
+    <Compile Include="Ball.cs" />
+    <Compile Include="Simulation.cs" />
+    <Compile Include="Data\SpeedupData.cs" />
+    <Compile Include="Compiled\SpeedupCompiled.cs" />
+    <Compile Include="Compiled\ISensor.cs" />
+    <Compile Include="Data\GoalieData.cs" />
+    <Compile Include="Goalie.cs" />
+    <Compile Include="Trig.cs" />
+    <Compile Include="Primitives\Circle.cs" />
+    <Compile Include="Wall.cs" />
+    <Compile Include="Protocol\Connection.cs" />
+    <Compile Include="Protocol\ClientMessage.cs" />
+    <Compile Include="Protocol\ServerMessage.cs" />
+    <Compile Include="Protocol\Listener.cs" />
+    <Compile Include="Protocol\Connecter.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Primitives\" />
+    <Folder Include="Data\" />
+    <Folder Include="Compiled\" />
+    <Folder Include="Protocol\" />
+  </ItemGroup>
+</Project>

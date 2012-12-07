@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Wall Shape="Closed" Thickness="1" Color="Red" Points="-8,4 -.5,0 -8,-4" />  
+  <Wall Shape="Open" Thickness="1" Color="Red" Points="0,32 -50,32 -50,-32 0,-32" />
+  <Wall Shape="Open" Thickness="1" Color="Red" Points="-24,8 -20,8 -20,-8 -24,-8" />
+  <Wall Shape="Closed" Thickness="1.5" Color="Red" Points="-36,-16 -40,-12 -40,-16" />  
+  <Wall Shape="Closed" Thickness="1.5" Color="Red" Points="-40,12 -36,16 -40,16" />
+  <Wall Shape="Closed" Thickness="1" Color="DodgerBlue" Points="8,-4 .5,0 8,4" />
+  <Wall Shape="Open" Thickness="1" Color="DodgerBlue" Points="0,-32 50,-32 50,32 0,32" />
+  <Wall Shape="Open" Thickness="1" Color="DodgerBlue" Points="24,-8 20,-8 20,8 24,8" />
+  <Wall Shape="Closed" Thickness="1.5" Color="DodgerBlue" Points="36,-16 40,-16 40,-12" />
+  <Wall Shape="Closed" Thickness="1.5" Color="DodgerBlue" Points="40,12 40,16 36,16" />
+  <Goal Color="Red" Points="-23,7 -21,7 -21,-7 -23,-7" />
+  <Goal Color="DodgerBlue" Points="23,-7 21,-7 21,7 23,7" />
+  <Goalie Begin="-23.5,-6" End="-23.5,6" />
+  <Goalie Begin="23.5,-6" End="23.5,6" />  
+  <Spawn Color="DodgerBlue" Position="-4,-8" />
+  <Spawn Color="DodgerBlue" Position="-4,8" />
+  <Spawn Color="Red" Position="4,-8" />
+  <Spawn Color="Red" Position="4,8" />
+  <Ball Position="0,0" />
+  <Speedup Color="Red" Force="4,0" Points="-50,-32 -50,-31 -40,-31 -40,-32" />
+  <Speedup Color="DodgerBlue" Force="-4,0" Points="50,32 50,31 40,31 40,32" />
+</Map>
